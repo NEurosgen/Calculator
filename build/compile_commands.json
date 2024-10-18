@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\main.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\main.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/main.cpp",
+  "output": "CMakeFiles/calculator.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\components\\Parser.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\components\\Parser.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/components/Parser.cpp",
+  "output": "CMakeFiles/calculator.dir/components/Parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\components\\Calculator.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\components\\Calculator.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/components/Calculator.cpp",
+  "output": "CMakeFiles/calculator.dir/components/Calculator.cpp.obj"
+},
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\components\\Evalue.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\components\\Evalue.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/components/Evalue.cpp",
+  "output": "CMakeFiles/calculator.dir/components/Evalue.cpp.obj"
+},
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\components\\LoaderLibrary.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\components\\LoaderLibrary.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/components/LoaderLibrary.cpp",
+  "output": "CMakeFiles/calculator.dir/components/LoaderLibrary.cpp.obj"
+},
+{
+  "directory": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\calculator.dir\\components\\DownloadLibrary.cpp.obj -c C:\\Users\\JACK\\Desktop\\Polytech\\C++\\calculator-master\\components\\DownloadLibrary.cpp",
+  "file": "C:/Users/JACK/Desktop/Polytech/C++/calculator-master/components/DownloadLibrary.cpp",
+  "output": "CMakeFiles/calculator.dir/components/DownloadLibrary.cpp.obj"
+}
+]
