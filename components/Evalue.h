@@ -5,12 +5,11 @@
 #include <iostream>
 #include <map>
 
-
-class Processor{
+class Processor {
 public:
     Processor();
     double process(std::stack<double> &numbers, std::stack<std::string> &operators);
+
 private:
     LoaderLibrary loaderLibrary;
 };
-

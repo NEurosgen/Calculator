@@ -18,7 +18,4 @@ public:
 
 private:
     void *handler;
-
 };
-
-

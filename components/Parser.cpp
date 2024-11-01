@@ -14,32 +14,26 @@ double ExpressionParser::parse(std::string& expression, Processor& processor) {
         if (expression[i] == ' ') {
             i++;
             continue;
-        }
-        else if (isdigit(expression[i])) {
+        } else if (isdigit(expression[i])) {
             numbers.push(readNumber(expression, i));
-        }
-        else if (validSimpleFunctions.count(element)) {
+        } else if (validSimpleFunctions.count(element)) {
             while (!operators.empty()) {
                 if (getPriority(operators.top()) >= getPriority(element)) {
                     processor.process(numbers, operators);
-                }
-                else {
+                } else {
                     break;
                 }
             }
             operators.emplace(element);
             i++;
-        }
-        else if (element == "(") {
+        } else if (element == "(") {
             operators.emplace(element);
             i++;
-        }
-        else if (element == ")") {
+        } else if (element == ")") {
             while (!operators.empty()) {
                 if (operators.top() != "(") {
                     processor.process(numbers, operators);
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -48,11 +42,9 @@ double ExpressionParser::parse(std::string& expression, Processor& processor) {
             }
             operators.pop();
             i++;
-        }
-        else if (!isdigit(expression[i])) {
+        } else if (!isdigit(expression[i])) {
             operators.push(readFunction(expression, i));
-        }
-        else {
+        } else {
             throw std::runtime_error("Invalid expr");
         }
     }
@@ -73,8 +65,7 @@ double ExpressionParser::readNumber(std::string& expression, size_t& i) {
 
 std::string ExpressionParser::readFunction(std::string& expression, size_t& i) {
     std::string func;
-    while (i < expression.size() && isalpha(expression[i]) &&
-        expression[i] != ' ') {
+    while (i < expression.size() && isalpha(expression[i]) && expression[i] != ' ') {
         func += expression[i];
         i++;
     }
@@ -83,8 +74,7 @@ std::string ExpressionParser::readFunction(std::string& expression, size_t& i) {
     }
     if (validFunctions.count(func) != 0) {
         return func;
-    }
-    else {
+    } else {
         throw std::runtime_error("IncorrectFunc");
     }
 }

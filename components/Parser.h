@@ -6,7 +6,8 @@
 
 class ExpressionParser {
 public:
-    double parse(std::string& expression, Processor& processor);
+    double parse(std::string &expression, Processor &processor);
+
 private:
     std::set<std::string> validFunctions = {"sin", "cos", "tg", "ctg", "ln"};
     std::set<std::string> validSimpleFunctions = {"+", "-", "*", "/", "^"};

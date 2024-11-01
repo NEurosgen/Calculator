@@ -11,8 +11,7 @@ void Input(std::string& expr, ExpressionParser& parser, Processor& processor) {
             result = parser.parse(expr, processor);
             std::cout << "Answer: " << result << "\n";
             std::cout << "Input math expresion: ";
-        }
-        catch (const std::exception& e) {
+        } catch (const std::exception& e) {
             std::cerr << "Error: " << e.what() << std::endl;
         }
     }

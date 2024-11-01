@@ -1,7 +1,7 @@
 #include "LoaderLibrary.h"
 
 bool LoaderLibrary::openedLibrary(std::string const &nameLibrary) {
-    for (SharedLibrary const&it: openedLibraries) {
+    for (SharedLibrary const &it : openedLibraries) {
         if (it.name == nameLibrary) {
             return true;
         }
@@ -19,16 +19,15 @@ SharedLibrary &LoaderLibrary::getLibrary(const std::string &nameLibrary) {
     if (!openedLibrary(nameLibrary)) {
         loadLibrary(nameLibrary);
     }
-    for (SharedLibrary &it: openedLibraries) {
+    for (SharedLibrary &it : openedLibraries) {
         if (it.name == nameLibrary) {
             return it;
         }
     }
 }
 
-LoaderLibrary::~LoaderLibrary(){
-    for(SharedLibrary &it : openedLibraries){
+LoaderLibrary::~LoaderLibrary() {
+    for (SharedLibrary &it : openedLibraries) {
         it.closeLib();
     }
-
 }

@@ -3,11 +3,11 @@
 void SharedLibrary::loadLibrary(std::string const& nameLibrary) {
     std::string filePath;
     std::stringstream ss;
-    
+
     ss << "../plugins/"
-        << "/lib" << nameLibrary << ".so";
+       << "/lib" << nameLibrary << ".so";
     filePath = ss.str();
-    std::cout<<filePath<<" "<<nameLibrary<<'\n';
+    std::cout << filePath << " " << nameLibrary << '\n';
     void* libraryHandler = dlopen(filePath.c_str(), RTLD_LAZY);
 
     if (!libraryHandler) {
@@ -22,21 +22,21 @@ void SharedLibrary::loadLibrary(std::string const& nameLibrary) {
 }
 
 double SharedLibrary::runFunc(double const& value) {
-    double (*function)(double) =
-        (double (*)(double))dlsym(this->handler, "func");
+    double (*function)(double) = (double (*)(double))dlsym(this->handler, "func");
     if (!function) {
         throw std::runtime_error("Invalid func!");
     }
     return function(value);
 }
 
-double SharedLibrary::runFunc(double const & value1, double const& value2) {
-    double (*function)(double, double) =
-        (double (*)(double, double))dlsym(this->handler, "func");
+double SharedLibrary::runFunc(double const& value1, double const& value2) {
+    double (*function)(double, double) = (double (*)(double, double))dlsym(this->handler, "func");
     if (!function) {
         throw std::runtime_error("Invalid func!");
     }
     return function(value1, value2);
 }
 
-void SharedLibrary::closeLib() { dlclose(handler); }
+void SharedLibrary::closeLib() {
+    dlclose(handler);
+}
