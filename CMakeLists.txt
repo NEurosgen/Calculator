@@ -6,9 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 add_executable(calculator main.cpp
+
         components/Parser.cpp
+
         components/Parser.h
         components/Calculator.cpp
+        
         components/Calculator.h
         components/Evalue.cpp
         components/Evalue.h
